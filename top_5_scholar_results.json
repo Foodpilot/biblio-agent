@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Sustainable coffee production",
+    "author": "Unknown",
+    "url": "https://oxfordre.com/environmentalscience/display/10.1093/acrefore/9780199389414.001.0001/acrefore-9780199389414-e-224",
+    "score": 85,
+    "summary": "This article provides a comprehensive overview of sustainable coffee production, covering the environmental factors affecting coffee growth and productivity such as temperature, water availability, and soil type. It highlights Brazil as the largest coffee producer, using mechanized harvesting for higher productivity, and discusses the economic importance of coffee in many countries. The article also touches on the challenges of price volatility and climate events affecting the coffee trade."
+  },
+  {
+    "title": "Modeling the climate change impacts on global coffee production",
+    "author": "C Bunn",
+    "url": "https://edoc.hu-berlin.de/bitstream/handle/18452/18001/bunn.pdf?sequence=1",
+    "score": 90,
+    "summary": "This study models the biophysical impacts of climate change on global coffee production using the machine learning algorithm Maxent. It discusses the regional abandonment of coffee production, migration in latitude and altitude, and the inconclusive impacts on Arabica and Robusta coffee crops. The paper emphasizes the need for global-scale studies that estimate economic impacts and suggests integrating results with the Globiom model."
+  },
+  {
+    "title": "Estimating the impact on water scarcity due to coffee production, trade, and consumption worldwide and a focus on EU",
+    "author": "F Sporchia, N Patrizi",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0301479722024549",
+    "score": 80,
+    "summary": "This research assesses the environmental impacts of blue water exploitation driven by coffee consumption. It analyzes the coffee production levels and international trade patterns among 254 countries, focusing on the EU's role as a major consumer. The study uses the AWARE approach to provide country-specific insights into the global dependencies and interlinkages that drive the impact on water scarcity linked to coffee consumption."
+  },
+  {
+    "title": "An environmental and economic sustainability assessment of coffee production in the UK",
+    "author": "P Gosalvitr, RM Cuéllar-Franca",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1385894723015243",
+    "score": 75,
+    "summary": "This article presents a systematic literature review of coffee Life Cycle Assessment (LCA) studies, covering 34 studies and 234 coffee systems. It reports a wide variability in Global Warming Potential (GWP) values at both farm and drink levels and identifies main contributors to GWP, such as land use change, fertilizers, and wet processing. The review highlights the need for a comprehensive understanding of the variability of LCA results and the impacts of cropping systems."
+  },
+  {
+    "title": "Sustainable coffee production",
+    "author": "Unknown",
+    "url": "https://oxfordre.com/environmentalscience/display/10.1093/acrefore/9780199389414.001.0001/acrefore-9780199389414-e-224",
+    "score": 70,
+    "summary": "The article discusses the economic aspects of coffee production, including the livelihoods dependent on coffee, price volatility, and market transformations. It provides historical context on coffee price stabilization efforts and the challenges faced by producers due to price fluctuations. The article also provides statistics on world coffee production, export, and consumption from 2006 to 2015."
+  }
+]
