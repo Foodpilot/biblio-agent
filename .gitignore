@@ -1,0 +1,6 @@
+res
+res_cleaned.csv
+top_5_scholar_results.json
+.env
+venv
+__pycache__/
