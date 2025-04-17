@@ -3,4 +3,6 @@ res_cleaned.csv
 top_5_scholar_results.json
 .env
 venv
+.venv/
 __pycache__/
+.ipynb_checkpoints/
