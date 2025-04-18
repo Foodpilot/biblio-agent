@@ -1,8 +1,11 @@
 from openai import OpenAI
 from rag import get_embedding
 from db_supabase import search_similar_chunks, print_chunks_table
+from dotenv import load_dotenv
+import os
 
-client = OpenAI(api_key="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")
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 from search_and_scrap import search_and_scrap
 import json
 import pandas as pd

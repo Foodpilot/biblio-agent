@@ -6,3 +6,9 @@ top_5_scholar_results.json
 venv/
 *.pyc
 __pycache__/
+test.py
+res
+document.md
+dic
+doc
+semantic
