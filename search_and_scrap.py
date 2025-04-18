@@ -8,15 +8,21 @@ import os
 
 from rag import get_embedding
 from db_supabase import insert_chunk, get_existing_urls
+from markitdown import MarkItDown
+from dotenv import load_dotenv
+
 
 
 
 
 
 # === CONFIGURATION ===
-SERPAPI_KEY = "74f735f4188c3c38b349eeed3e18b0daa72a0008017bf16a71aa09b8f4b2bdd8"
-FIRECRAWL_TOKEN = "fc-2b0d1d4ae8bd44d1bbcff3858ff9721b"
-OPENAI_API_KEY = "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"
+
+load_dotenv()
+
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+FIRECRAWL_TOKEN = os.getenv("FIRECRAWL_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 CSV_PATH = "res.csv"
@@ -37,9 +43,10 @@ def scrape_content(url):
     headers = {"Authorization": f"Bearer {FIRECRAWL_TOKEN}"}
     data = {
         "url": url,
-        "pageOptions": {
+        "payload": {
             "onlyMainContent": True,
-            "replaceAllPathsWithAbsolutePaths": True
+            "replaceAllPathsWithAbsolutePaths": True,
+            "formats": ["markdown"]
         }
     }
     print(f"[✓] Scraping content from {url}...")
@@ -91,6 +98,7 @@ def get_cleaned_csv():
             writer.writerow(cleaned_row)
 
     print("✅ CSV cleaned and saved as res_cleaned.csv")
+
 
 
 
@@ -151,6 +159,7 @@ def search_and_scrap(query="coffee carbon footprint"):
     
 
 if __name__ == "__main__":
-    search_and_scrap("coffee carbon footprint")
-    # res = scrape_content("https://www.sciencedirect.com/science/article/pii/S0167880912000345")
-    # print(res)
+    # search_and_scrap("coffee carbon footprint")
+    res = scrape_content("https://www.sciencedirect.com/science/article/pii/S0167880912000345")
+    # print(convert_to_markdown(res["data"]["content"]))
+    print(res)

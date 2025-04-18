@@ -1,9 +1,13 @@
 from supabase import create_client, Client
 from rag import get_embedding
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
-SUPABASE_URL = "https://fgzlopreouzxsmcpwclv.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZnemxvcHJlb3V6eHNtY3B3Y2x2Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDYxOTYwMSwiZXhwIjoyMDYwMTk1NjAxfQ.xUuJpRjL8REgbLJRs3hlB_pQ7RgD8-qW_YHfYdDwUKA"
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
@@ -70,6 +74,7 @@ def get_existing_urls():
         print(f"[✗] Failed to fetch existing URLs: {e}")
         return set()
 
+# get unique metadata from the database
 def get_unique_documents_by_url():
     try:
         # Select all metadata objects

@@ -1,9 +1,15 @@
 import requests
-from db_supabase import get_unique_documents_by_url  
+from db_supabase import get_unique_documents_by_url
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 
 # Replace with your actual keys and IDs
-NOTION_API_KEY = "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"
-NOTION_DATABASE_ID = "1cfebcf202ca805dbdb7cf06059f2027"
+NOTION_API_KEY = os.getenv("NOTION_API_KEY")
+NOTION_DATABASE_ID = os.getenv("NOTION_DATABASE_ID")
 
 def get_documents_from_notion():
     url = f"https://api.notion.com/v1/databases/{NOTION_DATABASE_ID}/query"
@@ -70,10 +76,10 @@ def create_notion_page(metadata):
                 "rich_text": [{"text": {"content": author}}]
             },
             "Url": {
-                "rich_text": [{"text": {"content": f"{url_text}"}}]
+                "rich_text": [{"text": {"content": url_text}}]
             },
             "Excerpt": {
-                "rich_text": [{"text": {"content": f"{abstract}"}}]
+                "rich_text": [{"text": {"content": abstract}}]
             }
         }
     }

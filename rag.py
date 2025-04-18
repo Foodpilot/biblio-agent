@@ -2,9 +2,14 @@ from openai import OpenAI
 import numpy as np
 import tiktoken
 import pandas as pd
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 # === CONFIG ===
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 # === Truncate to token limit ===
